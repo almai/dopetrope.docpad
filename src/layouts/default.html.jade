@@ -1,0 +1,17 @@
+html
+  include includes/head
+  body.homepage
+    #page-wrapper
+      // Header
+      #header-wrapper
+        include includes/header
+      // Main
+      #main-wrapper
+        .container
+          != content
+      // Footer
+      #footer-wrapper
+        section#footer.container
+          include includes/footer
+      // Scripts
+      include includes/scripts

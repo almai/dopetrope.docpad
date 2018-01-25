@@ -1,0 +1,53 @@
+#header
+  // Logo
+  h1
+    a(href='/')= site.title
+  // Nav
+  nav#nav
+    ul
+      - i = 0
+      - items = getCollection('siteNavItems').toJSON()
+      each item in items
+        - var slug = getSlug(item.title)
+        - var selected = getSlug(document.title) === slug ? 'current' : ''
+        if i === 1
+          include dropdown
+        li(class="#{selected}")
+          a(href="/#{slug !== 'home' ? slug : ''}")= item.title
+        - i++
+      
+  // Banner
+  section#banner
+    header
+      h2 Howdy. This is Dopetrope.
+      p A responsive template by HTML5 UP
+  // Intro
+  section#intro.container
+    .row
+      .4u(class='12u(mobile)')
+        section.first
+          i.icon.featured.fa-cog
+          header
+            h2 Ipsum consequat
+          p
+            | Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.
+      .4u(class='12u(mobile)')
+        section.middle
+          i.icon.featured.alt.fa-flash
+          header
+            h2 Magna etiam dolor
+          p
+            | Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.
+      .4u(class='12u(mobile)')
+        section.last
+          i.icon.featured.alt2.fa-star
+          header
+            h2 Tempus adipiscing
+          p
+            | Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.
+    footer
+      ul.actions
+        li
+          a.button.big(href='#') Get Started
+        li
+          a.button.alt.big(href='#') Learn More

@@ -1,0 +1,68 @@
+/* Wrappers */
+
+	#header-wrapper {
+		position: relative;
+		background: #ffffff;
+		border-bottom: solid 1px #ccc;
+	}
+
+	#main-wrapper {
+		position: relative;
+		background: #f7f7f7 url('images/bg.png');
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			background: url('images/bg.png');
+			background-size: 100% 100%;
+			z-index: 0;
+			opacity: 0.1;
+		}
+
+		.major {
+			h2 {
+				background: #f7f7f7 url('images/bg.png');
+			}
+		}
+	}
+
+	#footer-wrapper {
+		position: relative;
+		color: #858484;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			background: url('images/bg.png');
+			background-size: 100% 100%;
+			z-index: 0;
+			opacity: 0.5;
+		}
+
+		a {
+			color: #c5c4c4;
+		}
+
+		h2, h3, h4, h5, h6, strong, b {
+			color: #fff;
+
+			a {
+				color: inherit;
+			}
+		}
+
+		ul {
+			&.contact li,
+			&.dates li,
+			&.divided li {
+				border-top-color: #353434;
+				border-top-color: rgba(255, 255, 255, 0.05);
+			}
+		}
+	}

@@ -1,0 +1,19 @@
+/* Intro */
+
+#intro {
+	text-align: center;
+}
+
+/* Copyright */
+
+#copyright {
+	text-align: center;
+
+	.links {
+		display: inline-block;
+		background: #2C2929;
+		background: rgba(255, 255, 255, 0.05);
+		border-radius: 5px;
+		margin: 0;
+	}
+}

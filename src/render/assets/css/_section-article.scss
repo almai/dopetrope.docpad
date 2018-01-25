@@ -1,0 +1,33 @@
+/* Section/Article */
+
+section, article {
+	margin-bottom: 2.5em;
+
+	> :last-child,
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+header {
+	> p {
+		display: block;
+		font-style: italic;
+	}
+
+	&.major {
+		position: relative;
+		text-align: center;
+		border-top: solid 1px #ccc;
+		top: 1em;
+
+		h2 {
+			background: #fff;
+			position: relative;
+			top: -0.65em;
+			display: inline;
+			margin: 0;
+			padding: 0 1em 0 1em;
+		}
+	}
+}

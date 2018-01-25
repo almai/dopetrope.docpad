@@ -1,0 +1,35 @@
+/* Skel */
+
+@include skel-breakpoints((
+  desktop: '(min-width: 737px)',
+  tablet: '(min-width: 737px) and (max-width: 1200px)',
+  mobile: '(max-width: 736px)'
+));
+
+@include skel-layout((
+  reset: 'full',
+  boxModel: 'border',
+  grid: true,
+  conditionals: true,
+  containers: true,
+  breakpoints: (
+    desktop: (
+      containers: 1200px,
+      grid: (
+        gutters: (50px, 50px)
+      ),
+    ),
+    tablet: (
+      containers: 960px,
+      grid: (
+        gutters: (25px, 25px)
+      ),
+    ),
+    mobile: (
+      containers: (100%, true),
+      grid: (
+        gutters: (20px, 20px)
+      ),
+    )
+  )
+));
